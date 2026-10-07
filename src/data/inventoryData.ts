@@ -1,0 +1,237 @@
+/**
+ * Comprehensive Collectible Items & Relics Database for Ravenscroft Castle
+ * Gothic-Romantic, Dark Victorian & Sensual Mystery Atmospheric Lore
+ */
+
+import { InventoryItemDef } from '../types/inventory';
+
+export const ITEMS_DATABASE: Record<string, InventoryItemDef> = {
+  // ==========================================
+  // SİLAHLAR & TEÇHİZAT (WEAPONS)
+  // ==========================================
+  silver_cane_dagger: {
+    id: 'silver_cane_dagger',
+    name: 'Gümüş Hançer',
+    category: 'weapon',
+    rarity: 'rare',
+    iconName: 'Sword',
+    emoji: '🗡️',
+    shortDescription: 'Julian’ın soğuk gümüşten dövülmüş, Ravenscroft soyunun gizli kan bağını ve karanlık gecelerini taşıyan aile yadigârı hançeri.',
+    lore: 'Lord Alistair’in titreyen ellerle Julian’a emanet ettiği, ay ışığında solgun bir alev gibi parıldayan gümüş hançer. Namlusuna kazınmış kadim tılsımlar, hem geceye sığınan vampirik fısıltıları yarar hem de taşıyıcısının damarlarındaki asil kanı uyanık tutar.',
+    inspectionText: 'Namlunun üzerinde neredeyse silinmiş Latin bir yakarış parıldıyor: "Veritas Vos Liberabit Sanguinis" (Hakikat Sizi Kanla Özgür Kılacak). Kabzadaki gümüş kuzgun gözleri, odadaki en ufak gölgede bile canlıymışçasına nabız gibi parıldıyor.',
+    acquiredLocation: 'Başlangıç Teçhizatı (Alistair’in Mirası)',
+  },
+  inquisition_blade_shard: {
+    id: 'inquisition_blade_shard',
+    name: 'Engizisyon Rün Kılıcı Parçası',
+    category: 'weapon',
+    rarity: 'legendary',
+    iconName: 'ShieldAlert',
+    emoji: '⚔️',
+    shortDescription: 'Valeria’nın kutsanmış alevli kılıcından kopan, dokunulduğunda teni yakan rünik metal parçası.',
+    lore: 'Kızıl Engizisyon’un en tutkulu ve amansız avcılarının taşıdığı kutsal kılıcın kırık ucu. Şatonun lanetli koridorlarında yankılanan günahkâr arzuları ve vampirik büyüleri küle çeviren kutsal bir kor barındırır.',
+    inspectionText: 'Parçayı avucunuzda sıktığınızda Valeria’nın nefesi kadar sıcak ve tehlikeli bir titreşim zihninizi sarıyor; zayıflığı yakıp yerine sarsılmaz bir savaş iradesi bırakıyor.',
+    acquiredLocation: 'Bölüm 3: Dış Surlar (Valeria ile Karşılaşma)',
+  },
+
+  // ==========================================
+  // İPUÇLARI & BELGELER (CLUES & DOCUMENTS)
+  // ==========================================
+  alistair_letter: {
+    id: 'alistair_letter',
+    name: 'Lord Alistair’in Mühürlü Mektubu',
+    category: 'clue',
+    rarity: 'rare',
+    iconName: 'Mail',
+    emoji: '📜',
+    shortDescription: 'Alistair’in titrek elyazısıyla yazdığı, koyu kırmızı balmumu ve kan damlasıyla mühürlenmiş karanlık davet.',
+    lore: 'Kuzgun tüyü mürekkeple sararmış parşömene dökülen bu satırlar, hem bir veda mektubu hem de Ravenscroft lanetinin kapısını aralayan tekinsiz bir vasiyettir. Mektubun kat yerlerinden taze kurumuş gül ve nemli mezar kokusu yükselir.',
+    inspectionText: '"Julian... Şatonun kadife perdeleri ardında asırlardır uyuyan o bakışları hissettiğinde çok geç olacak. Vivienne seni bekliyor, fakat ruhunu sadece bu hançerin gümüşü koruyabilir. Sakın şafağa güvenme..."',
+    acquiredLocation: 'Prolog: Blackwood Ormanı',
+  },
+  dynasty_relief: {
+    id: 'dynasty_relief',
+    name: 'Unutulmuş Hanedan Rölyef Çizimi',
+    category: 'clue',
+    rarity: 'rare',
+    iconName: 'Scroll',
+    emoji: '🏺',
+    shortDescription: 'Karanlık su kemerlerinin nemli taşlarına kazınmış, gölgeler içinde kaybolan hanedanın köklerini açığa vuran kömür çizimi.',
+    lore: 'Kraliçenin ayakları dibinde boyun eğmiş siluetler... Yüzleri asırlar önce hançer darbeleriyle kazınmış olsa da, boyunlarındaki damarlardan süzülen kadehler ve en öndeki figürün zırhındaki Ravenscroft arması, hanedanın bu şatonun kurbanı değil, bizzat efendisi olduğunu fısıldıyor.',
+    inspectionText: 'Rölyefin detaylarında gizli bir ayrıntı göze çarpıyor: Kraliçenin elini öpen şövalyenin boynunda, Vivienne’in taktığı o kan kırmızısı yakut kolyenin birebir aynısı resmedilmiş.',
+    acquiredLocation: 'Bölüm 3: Şato Su Kemerleri (Point & Click İncelemesi)',
+  },
+  torn_cloak_cufflink: {
+    id: 'torn_cloak_cufflink',
+    name: 'Yırtık Kadife & Gümüş Kol Düğmesi',
+    category: 'clue',
+    rarity: 'rare',
+    iconName: 'Sparkles',
+    emoji: '🧥',
+    shortDescription: 'Dehlizlerin karanlık sularında sürüklenen, zümrüt yeşili yırtık kadife ve gümüş bir kuzgun kol düğmesi.',
+    lore: 'Alistair’in telaşla ve dehşet içinde şatonun alt mahzenlerine kaçarken bıraktığı son iz. Kumaşın kenarlarındaki yırtıklar insan elinden çıkma değil; sanki pürüzsüz mermer tırnaklar tarafından parçalanmış gibi.',
+    inspectionText: 'Gümüş düğmenin arkasında gizli bir oyuk var; içine kurumuş bir siyah gül yaprağı ve minik bir gravür işlenmiş: "Karanlık bizi çağırıyor, sevgilim."',
+    acquiredLocation: 'Bölüm 3: Su Kemerleri Dibi',
+  },
+  castle_map_fragment: {
+    id: 'castle_map_fragment',
+    name: 'Şato Mahzenleri Harita Parçası',
+    category: 'clue',
+    rarity: 'uncommon',
+    iconName: 'Map',
+    emoji: '🗺️',
+    shortDescription: 'Ravenscroft’un labirent benzeri gizli geçitlerini, aynalı salonlarını ve kilitli şapellerini gösteren kadim parşömen.',
+    lore: 'Yıllar önce şatonun mimarı tarafından kendi kanıyla çizildiği rivayet edilen tekinsiz bir kroki. Bazı odalar harita üzerinde sürekli yer değiştiriyor gibi görünür ve baktıkça insanın zihninde tekinsiz fısıltılar uyandırır.',
+    inspectionText: 'Kırmızı mürekkeple düşülmüş el yazısı bir uyarı: "Aynalı Koridor’dan geçerken yansımana bakma; çünkü yansıman senden önce gözlerini kırpabilir..."',
+    acquiredLocation: 'Bölüm 1: Karşılama Salonu / Kütüphane',
+  },
+
+  // ==========================================
+  // TILSIMLAR & YADİGÂRLAR (RELICS & KEYS)
+  // ==========================================
+  ravenscroft_crest_seal: {
+    id: 'ravenscroft_crest_seal',
+    name: 'Ravenscroft Aile Mührü',
+    category: 'relic',
+    rarity: 'legendary',
+    iconName: 'Shield',
+    emoji: '🦅',
+    shortDescription: 'Lanetli Şövalye Zırhı’nın kalbinden düşen, asırlık kuzgun işlemeli saf gümüş ve yakut kakmalı hanedan mührü.',
+    lore: 'Ravenscroft hanedanının ilk kurucuları tarafından dövülmüş, şatonun tüm gizli geçitlerini, kripta kapılarını ve asırlık mühürlerini açmaya muktedir olan kadim bir yadigâr. Üzerindeki kuzgun motifi, ay ışığı altında hafifçe kan rengine döner.',
+    inspectionText: 'Mührün arkasında eski gotik harflerle şu sözler kazınmış: "Sanguis Noster, Regnum Nostrum" (Kanımız Bizimdir, Hükümranlığımız Bizimdir). Elinizde tuttuğunuzda şatonun duvarlarındaki fısıltıların size boyun eğdiğini hissediyorsunuz.',
+    acquiredLocation: 'Bölüm 1: Doğu Galerisi Zırh Savaşı Zaferi',
+  },
+  silver_guard_badge: {
+    id: 'silver_guard_badge',
+    name: 'Gümüş Muhafız Rozeti',
+    category: 'relic',
+    rarity: 'rare',
+    iconName: 'Shield',
+    emoji: '🛡️',
+    shortDescription: 'Kriptanın derinliklerinde yatan kadim muhafızın göğsünden sökülen, buz gibi soğuk gümüş nişan.',
+    lore: 'Ravenscroft’un unutulmuş şövalye muhafızlarına ait asırlık bir nişane. Şatonun karanlık zindanlarında kol gezen vampirik baskıyı ve boğucu dehşeti kırar; taşıyıcısına tekinsiz bir vakar ve soğukkanlılık bahşeder.',
+    inspectionText: 'Rozeti elinize aldığınızda parmak uçlarınız uyuşuyor ve kulaklarınızda yüzyıllar öncesinin çelik çarpışmaları ile acı dolu iniltileri yankılanıyor.',
+    acquiredLocation: 'Bölüm 3: Kızıl Kripta Nöbetçisi Savaş Zaferi',
+  },
+  necklace_choker: {
+    id: 'necklace_choker',
+    name: 'Lady Vivienne’in Yakut Gerdanlığı',
+    category: 'relic',
+    rarity: 'legendary',
+    iconName: 'Gem',
+    emoji: '📿',
+    shortDescription: 'Vivienne’in porselen tenini süsleyen, içinde canlı bir damla kan dalgalanan efsunlu damla yakut gerdanlık.',
+    lore: 'Saf karanlık ve aristokratik arzunun somutlaşmış hali. Gerdanlığın ortasındaki iri damla yakut, geceleyin bir kalp gibi usulca parıldar. Vivienne’in asırlık baştan çıkarıcı gücünü ve şehvetli kan bağını taşır.',
+    inspectionText: 'Taşa yakından baktığınızda Vivienne’in nemli dudaklarının boynunuza değdiğini, sıcak ve yasak bir fısıltının zihninizi uyuşturduğunu hissediyorsunuz...',
+    acquiredLocation: 'Bölüm 1 / 2: Ravenscroft Malikânesi',
+  },
+  beatrice_key_ring: {
+    id: 'beatrice_key_ring',
+    name: 'Kripta & Mahzen Paslı Anahtarı',
+    category: 'relic',
+    rarity: 'rare',
+    iconName: 'Key',
+    emoji: '🗝️',
+    shortDescription: 'Beatrice’in siyah önlüğünün altından şıngırdayan, şatonun en karanlık yasak odalarını açan ağır demir anahtar.',
+    lore: 'Şatonun hiçbir konuğunun adım atmaması gereken mezar odalarını, zincirli şapelleri ve gizli zindan kapılarını açan asırlık anahtar. Üzerindeki pas kokusu, asırlardır kurumuş kan ve mermer tozuyla harmanlanmıştır.',
+    inspectionText: 'Anahtarın soğukluğu teninizi ısırıyor. Beatrice’in itaatkâr ama gizemli tebessümü bu demirin soğukluğunda saklı gibi.',
+    acquiredLocation: 'Beatrice ile Etkileşim / Hizmetkâr Odası',
+  },
+  lenore_mirror_locket: {
+    id: 'lenore_mirror_locket',
+    name: 'Aynalı Gümüş Madalyon',
+    category: 'relic',
+    rarity: 'relic',
+    iconName: 'Sparkles',
+    emoji: '🪞',
+    shortDescription: 'Aynaların ardında unufak olmuş Lady Lenore’un melankolisini ve hüzünlü güzelliğini saklayan spektral madalyon.',
+    lore: 'Aynalar koridorunda asırlardır hapsolmuş hayalet gelin Lenore’un kederinden dövülmüş efsunlu bir yadigâr. Kapağı açıldığında içinde solmayan solgun bir gül yaprağı ve asla silinmeyen soğuk bir gözyaşı damlası belirir.',
+    inspectionText: 'Madalyonun camına parmağınızı dokundurduğunuzda, kulaklarınıza Lenore’un kırılgan hıçkırıkları ve "Beni unutma Julian..." diyen şefkatli fısıltısı doluyor.',
+    acquiredLocation: 'Aynalı Koridor / Lenore Sahnesi',
+  },
+
+  // ==========================================
+  // İKSİRLER & SARF MALZEMELERİ (CONSUMABLES)
+  // ==========================================
+  holy_water: {
+    id: 'holy_water',
+    name: 'Evangeline’in Kutsal Su Şişesi',
+    category: 'consumable',
+    rarity: 'uncommon',
+    iconName: 'Droplets',
+    emoji: '💧',
+    shortDescription: 'Evangeline’in gözyaşları ve şapel dualarıyla arındırılmış, gümüş kapaklı kristal şifa iksiri.',
+    lore: 'Karanlığın ve vampirik cazibenin zihni zehirlediği anlarda ruhu arındıran, bedendeki derin yaraları kutsal bir ışıkla saran saf su. Kokusunda tütsü ve taze beyaz zambaklar gizlidir.',
+    isConsumable: true,
+    consumableEffect: {
+      hp: 40,
+      sanity: 25,
+      willpower: 20,
+    },
+    effectDescription: 'Kullanıldığında: HP +40, İrade & Akıl Sağlığı +25 kazandırır.',
+    inspectionText: 'Kristal şişe ay ışığında bembeyaz bir parıltı yayıyor. Dudaklarınıza götürdüğünüz anda zihninizdeki karanlık sis dağılıyor, ruhunuz huzurla doluyor.',
+    acquiredLocation: 'Bölüm 2: Kripta Şapeli (Evangeline’in Hediyesi)',
+  },
+  black_rose_nectar: {
+    id: 'black_rose_nectar',
+    name: 'Siyah Gül Nektarı',
+    category: 'consumable',
+    rarity: 'rare',
+    iconName: 'Flower2',
+    emoji: '🥀',
+    shortDescription: 'Şatonun ay ışığı almayan mezarlık bahçesindeki siyah güllerden süzülen, baş döndürücü ve afrodizyak özüt.',
+    lore: 'Gece açıp şafakta solan yasak güllerin yapraklarından damıtılan kadife kıvamında bir nektar. Tüketildiğinde duyuları aşırı keskinleştirir, damarlardaki kanı hızlandırarak savaştaki odaklanma ve ölümcül darbe gücünü doruğa çıkarır.',
+    isConsumable: true,
+    consumableEffect: {
+      focus: 35,
+      mystery: 5,
+    },
+    effectDescription: 'Kullanıldığında: Odak (Tension) +%35, Gizem +5 kazandırır.',
+    inspectionText: 'Kadehe damlatıldığında koyu yakut rengine bürünen bu sıvı, damakta acı çikolata ve kan tadı bırakıyor; arzuyu ve savaş tutkusunu körüklüyor.',
+    acquiredLocation: 'Gül Bahçesi & Zindan Dehlizleri',
+  },
+  silver_crucifix_dust: {
+    id: 'silver_crucifix_dust',
+    name: 'Kutsanmış Gümüş Tozu',
+    category: 'consumable',
+    rarity: 'uncommon',
+    iconName: 'Sparkles',
+    emoji: '✨',
+    shortDescription: 'Engizisyon ocaklarında kutsal dualarla eritilip pudra haline getirilmiş saf gümüş tozu.',
+    lore: 'Karanlık yaratıkların ve vampirlerin üzerine serpildiğinde derilerini cızırdatarak kör eden, havaya savrulduğunda ise şatonun boğucu dehşet perdesini yırtıp zihne sarsılmaz bir cesaret veren kutsal toz.',
+    isConsumable: true,
+    consumableEffect: {
+      sanity: 30,
+      willpower: 30,
+    },
+    effectDescription: 'Kullanıldığında: Dehşeti dağıtır, İradeyi +30 yükseltir.',
+    inspectionText: 'İpek keseyi açtığınızda havaya dağılan mikro gümüş tanecikleri yıldızlar gibi parıldıyor; etraftaki karanlık gölgelerin acıyla geriye çekildiğini görüyorsunuz.',
+    acquiredLocation: 'Valeria’nın Avcı Teçhizatı',
+  },
+  morrigan_elixir: {
+    id: 'morrigan_elixir',
+    name: 'Morrigan’ın Yasak Kan Simyası',
+    category: 'consumable',
+    rarity: 'legendary',
+    iconName: 'FlaskConical',
+    emoji: '🧪',
+    shortDescription: 'Kulenin kara simyacısının mor alevler ve afrodizyak özlerle kaynattığı sarhoş edici iksir.',
+    lore: 'Acı ile zevki, ölüm ile canlanmayı ayıran o ince çizgide üretilmiş yasak bir simya şaheseri. İçildiğinde hem bedeni anında onarır hem de zihni sınır tanımaz bir güç ve tutku sarhoşluğuyla doldurur.',
+    isConsumable: true,
+    consumableEffect: {
+      hp: 60,
+      focus: 50,
+      willpower: 20,
+    },
+    effectDescription: 'Kullanıldığında: HP +60, Odak +%50, İrade +20 kazandırır.',
+    inspectionText: 'Kristal şişenin mantarını hafifçe araladığınızda ortama menekşe, vanilya ve sıcak ten kokusu yayılıyor. Damarlarınızın alev alev yandığını hissediyorsunuz.',
+    acquiredLocation: 'Simyacı Kulesi / Morrigan Laboratuvarı',
+  },
+};
+
+export const DEFAULT_STARTING_INVENTORY: Record<string, number> = {
+  silver_cane_dagger: 1,
+  alistair_letter: 1,
+  holy_water: 2,
+  silver_crucifix_dust: 1,
+};

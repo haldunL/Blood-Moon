@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-novel {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Atmospheric Glows & Vignettes */
+.vignette-horror {
+  background: radial-gradient(circle at center, transparent 40%, rgba(20, 0, 8, 0.6) 80%, rgba(5, 0, 2, 0.95) 100%);
+}
+
+.vignette-heartbeat {
+  animation: pulse-heart 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse-heart {
+  0%, 100% {
+    box-shadow: inset 0 0 40px rgba(220, 38, 38, 0.15);
+  }
+  50% {
+    box-shadow: inset 0 0 90px rgba(220, 38, 38, 0.45);
+  }
+}
+
+/* Glitch animation for horror moments */
+@keyframes glitch-shake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-1px, -2px); }
+  60% { transform: translate(2px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.horror-glitch {
+  animation: glitch-shake 0.25s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 28, 28, 0.5);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 38, 0.8);
+}
